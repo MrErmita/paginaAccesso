@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina di Accesso</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1>Pagina di Accesso</h1>
+    <form action="">
+      <div class="container glass">
+        <label for="mail">E-mail: </label>
+        <input
+          type="text"
+          name="mail"
+          id="mailIn"
+          placeholder="Inserire la mail"
+          oninput="checkMail()"
+          required
+        />
+        <label for="cFisc">Codice Fiscale: </label>
+        <input
+          type="text"
+          name="cFisc"
+          id="cFiscIn"
+          placeholder="Inserire il codice fiscale"
+          required
+        />
+        <label for="pIva">Partita IVA: </label>
+        <input
+          type="text"
+          name="pIva"
+          id="ivaIn"
+          placeholder="Inserire la partita IVA"
+          required
+        />
+        <label for="selection">Seleziona il tipo: </label>
+        <select name="tipo" id="selType" required>
+          <option value="0">Seleziona il tipo</option>
+        </select>
+        <div class="radContainer">
+        <label for="">Genere: </label>
+        <br>
+        <label for="male">Maschio</label>
+        <input type="radio" name="sesso" id="male" />
+        <label for="female">Femmina</label>
+        <input type="radio" name="sesso" id="female" />
+        <label for="other">Altro</label>
+        <input type="radio" name="sesso" id="other" />
+        </div>
+        <div class="checkboxContainer">
+            <label for="">Seleziona almeno 2 hobbies: </label>
+            <br>
+            <input type="checkbox" name="checkPesca" id="checkPesca">Pesca</input>
+            <br>
+            <input type="checkbox" name="checkCaccia" id="checkCaccia">Caccia</input">
+            <br>
+            <input type="checkbox" name="checkUncinetto" id="checkUncinetto">Uncinetto</input>
+        </div>
+        <div class="btnContainer">
+            <input type="submit" value="Accedi" id="btnSubmit" />
+            <input type="reset" value="Cancella" id="btnReset" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
