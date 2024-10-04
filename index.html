@@ -17,8 +17,8 @@
           type="text"
           name="mail"
           id="mailIn"
-          placeholder="Inserire la mail"
-          oninput="checkMail()"
+          placeholder="example@hostname.com"
+          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
           required
         />
         <label for="cFisc">Codice Fiscale: </label>
@@ -26,7 +26,7 @@
           type="text"
           name="cFisc"
           id="cFiscIn"
-          placeholder="Inserire il codice fiscale"
+          placeholder="ABCDEF01G23H456I"
           required
         />
         <label for="pIva">Partita IVA: </label>

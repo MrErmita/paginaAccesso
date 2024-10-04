@@ -17,3 +17,11 @@ input, select {
     height: 30px;
     border: 1px solid;
 }
+
+input.valid {
+    border: 2px solid green;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
