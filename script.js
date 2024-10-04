@@ -39,3 +39,18 @@ function checkIva(id) {
   }
 }
 
+function checkHobbies() {
+    let check = getElementsByClassName("hobbyCheckbox");
+    let count = 0;
+    for (let i = 0; i < check.length; i++) {
+        if (check[i].checked) {
+            count++;
+        }
+    }
+    if (count >= 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
