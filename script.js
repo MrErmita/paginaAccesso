@@ -1,17 +1,41 @@
+const MAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CF_REGEX = /^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$/i;
+const IVA_REGEX = /^[0-9]{11}$/;
 
-const NAME_REGEX = "^[a-zA-Z]+$";
-const PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
-//PASSWORD_REGEX needs at least 8 characters, 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character
-const PHONE_REGEX = "^[0-9]{10}$";
-const CF_REGEX = "^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$" //regex codice fiscale
+function optim(id, value) {
+  if (value) {
+    document.getElementById(id).style.border = "2px solid green";
+  } else if (!value) {
+    document.getElementById(id).style.border = "2px solid red";
+  }
+}
 
-// function checkMail() {
-//     let mail = document.getElementById("mailIn").value;
-//     console.log(mail);
-//     if(!MAIL_REGEX.match(mail)) {
-//         document.getElementById("mailIn").style.border = "2px solid red";
-//     } else {
-//         document.getElementById("mailIn").style.borderColor = "black";
-//     }
-// }
+function checkMail(id) {
+  let mail = document.getElementById(id).value;
+  if (MAIL_REGEX.test(mail)) {
+    optim(id, true);
+  } else {
+    optim(id, false);
+  }
+}
+
+function checkCf(id) {
+  let cf = document.getElementById(id).value;
+  console.log(cf);
+  if (CF_REGEX.test(cf)) {
+    optim(id, true);
+  } else {
+    optim(id, false);
+  }
+}
+
+function checkIva(id) {
+  let iva = document.getElementById(id).value;
+  console.log(iva);
+  if (IVA_REGEX.test(iva)) {
+    optim(id, true);
+  } else {
+    optim(id, false);
+  }
+}
 

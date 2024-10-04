@@ -18,7 +18,7 @@
           name="mail"
           id="mailIn"
           placeholder="example@hostname.com"
-          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          oninput="checkMail(this.id)"
           required
         />
         <label for="cFisc">Codice Fiscale: </label>
@@ -27,6 +27,7 @@
           name="cFisc"
           id="cFiscIn"
           placeholder="ABCDEF01G23H456I"
+          oninput="checkCf(this.id)"
           required
         />
         <label for="pIva">Partita IVA: </label>
@@ -35,34 +36,40 @@
           name="pIva"
           id="ivaIn"
           placeholder="Inserire la partita IVA"
+          oninput="checkIva(this.id)"
           required
         />
         <label for="selection">Seleziona il tipo: </label>
         <select name="tipo" id="selType" required>
           <option value="0">Seleziona il tipo</option>
+          <option value="1">Integer</option>
+          <option value="2">Float</option>
+          <option value="3">Double</option>
+          <option value="4">String</option>
+          <option value="5">Char</option>
         </select>
         <div class="radContainer">
         <label for="">Genere: </label>
         <br>
         <label for="male">Maschio</label>
-        <input type="radio" name="sesso" id="male" />
+        <input type="radio" name="sesso" id="male" required/>
         <label for="female">Femmina</label>
-        <input type="radio" name="sesso" id="female" />
+        <input type="radio" name="sesso" id="female" required/>
         <label for="other">Altro</label>
-        <input type="radio" name="sesso" id="other" />
+        <input type="radio" name="sesso" id="other" required/>
         </div>
         <div class="checkboxContainer">
             <label for="">Seleziona almeno 2 hobbies: </label>
             <br>
-            <input type="checkbox" name="checkPesca" id="checkPesca">Pesca</input>
+            <input type="checkbox" name="checkPesca" id="checkPesca" class="hobbyCheckbox">Pesca</input>
             <br>
-            <input type="checkbox" name="checkCaccia" id="checkCaccia">Caccia</input">
+            <input type="checkbox" name="checkCaccia" id="checkCaccia" class="hobbyCheckbox">Caccia</input">
             <br>
-            <input type="checkbox" name="checkUncinetto" id="checkUncinetto">Uncinetto</input>
+            <input type="checkbox" name="checkUncinetto" id="checkUncinetto" class="hobbyCheckbox">Uncinetto</input>
         </div>
         <div class="btnContainer">
-            <input type="submit" value="Accedi" id="btnSubmit" />
-            <input type="reset" value="Cancella" id="btnReset" />
+            <input type="submit" value="Accedi" id="submitBtn" />
+            <input type="reset" value="Cancella" id="resetBtn" />
         </div>
       </div>
     </form>

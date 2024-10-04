@@ -18,10 +18,7 @@ input, select {
     border: 1px solid;
 }
 
-input.valid {
-    border: 2px solid green;
+#cFiscIn {
+    text-transform: uppercase;
 }
 
-input.invalid {
-    border: 2px solid red;
-}
