@@ -18,8 +18,10 @@ function checkMail(id) {
   let mail = document.getElementById(id).value;
   if (MAIL_REGEX.test(mail)) {
     optim(id, true);
+    document.getElementById("emailError").style.display = "none";
   } else {
     optim(id, false);
+    document.getElementById("emailError").style.display = "block";
   }
 }
 
@@ -28,8 +30,10 @@ function checkCf(id) {
   console.log(cf);
   if (CF_REGEX.test(cf)) {
     optim(id, true);
+    document.getElementById("cFiscError").style.display = "none";
   } else {
     optim(id, false);
+    document.getElementById("cFiscError").style.display = "block";
   }
 }
 
@@ -38,8 +42,10 @@ function checkIva(id) {
   console.log(iva);
   if (IVA_REGEX.test(iva)) {
     optim(id, true);
+    document.getElementById("ivaError").style.display = "none";
   } else {
     optim(id, false);
+    document.getElementById("ivaError").style.display = "block";
   }
 }
 

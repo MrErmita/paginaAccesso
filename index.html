@@ -20,6 +20,9 @@
           oninput="checkMail(this.id)"
           required
         />
+        <div class="emailError" id="emailError">
+          Inserisci un indirizzo email valido: example@hostname.com
+        </div>
         <label for="cFisc">Codice Fiscale: </label>
         <input
           type="text"
@@ -29,15 +32,21 @@
           oninput="checkCf(this.id)"
           required
         />
+        <div class="cFiscError" id="cFiscError">
+          Inserisci un codice fiscale valido: ABCDEF01G23H456I
+        </div>
         <label for="pIva">Partita IVA: </label>
         <input
           type="text"
           name="pIva"
           id="ivaIn"
-          placeholder="Inserire la partita IVA"
+          placeholder="12345678900"
           oninput="checkIva(this.id)"
           required
         />
+        <div class="pIvaError" id="pIvaError">
+          Inserisci una partita IVA valida: 12345678900
+        </div>
         <label for="selection">Seleziona il tipo: </label>
         <select name="tipo" id="selType" required class="button">
           <option value="0">Seleziona il tipo</option>

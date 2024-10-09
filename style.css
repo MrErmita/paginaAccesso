@@ -125,3 +125,27 @@ select {
 .txt {
   margin-right: 10px;
 }
+
+.emailError {
+  color: #f43c3c;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+.cFiscError {
+  color: #f43c3c;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+.pIvaError {
+  color: #f43c3c;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  display: none;
+}
