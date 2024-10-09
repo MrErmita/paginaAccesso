@@ -2,12 +2,14 @@ const MAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CF_REGEX = /^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$/i;
 const IVA_REGEX = /^[0-9]{11}$/;
 
+const DEF_COLOR = "#ffffff"
+
 function optim(id, value) {
   if (value) {
-    document.getElementById(id).style.border = "3px solid #4B6043";
+    document.getElementById(id).style.border = "2px solid #4B6043";
     document.getElementById(id).style.backgroundColor = "#95BB72";
   } else if (!value) {
-    document.getElementById(id).style.border = "3px solid #A52A2A";
+    document.getElementById(id).style.border = "2px solid #A52A2A";
     document.getElementById(id).style.backgroundColor = "#FFC0C0";
   }
 }
